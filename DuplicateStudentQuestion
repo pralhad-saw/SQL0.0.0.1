@@ -6,3 +6,11 @@ SELECT mobileno, COUNT(*) AS duplicate_count
 FROM student
 GROUP BY mobileno
 HAVING COUNT(*) > 1;
+
+
+//approach2
+
+SELECT pancardno, COUNT(*) AS duplicate_count
+FROM student
+GROUP BY pancardno
+HAVING COUNT(*) > 1;
