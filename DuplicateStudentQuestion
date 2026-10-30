@@ -14,3 +14,12 @@ SELECT pancardno, COUNT(*) AS duplicate_count
 FROM student
 GROUP BY pancardno
 HAVING COUNT(*) > 1;
+
+
+//approach3
+
+SELECT name, mobileno, pancardno, course, field, fees,
+       COUNT(*) AS duplicate_count
+FROM student
+GROUP BY name, mobileno, pancardno, course, field, fees
+HAVING COUNT(*) > 1;
