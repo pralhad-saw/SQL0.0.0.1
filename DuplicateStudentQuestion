@@ -1,0 +1,8 @@
+there is sql table name student with field id, name,mobileno., pancardno., course, field, fees . write sql query to detect duplicate student
+
+//approach 1
+
+SELECT mobileno, COUNT(*) AS duplicate_count
+FROM student
+GROUP BY mobileno
+HAVING COUNT(*) > 1;
