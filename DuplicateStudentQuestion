@@ -23,3 +23,32 @@ SELECT name, mobileno, pancardno, course, field, fees,
 FROM student
 GROUP BY name, mobileno, pancardno, course, field, fees
 HAVING COUNT(*) > 1;
+
+
+Show every duplicate row
+To display the complete details of all rows involved in a duplicate mobile number:
+
+sql
+SELECT s.*
+FROM student s
+JOIN (
+    SELECT mobileno
+    FROM student
+    GROUP BY mobileno
+    HAVING COUNT(*) > 1
+) d ON s.mobileno = d.mobileno
+ORDER BY s.mobileno;
+This joins the original table back to the duplicate mobile-number groups so you can inspect all matching records.
+
+Identify extra copies, not the first record
+sql
+SELECT *
+FROM (
+    SELECT s.*,
+           ROW_NUMBER() OVER (
+               PARTITION BY mobileno
+               ORDER BY id
+           ) AS rn
+    FROM student s
+) t
+WHERE rn > 1;
