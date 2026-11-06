@@ -60,3 +60,8 @@ WHERE ENAME LIKE "P%";
 -- Find employees whose name ENDS with L
 select ENAME from Employee
 WHERE ENAME LIKE "%L";
+
+
+-- Display salaries from highest to lowest
+select * from Employee
+order by SALARY desc;
