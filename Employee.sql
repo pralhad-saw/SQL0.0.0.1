@@ -19,3 +19,6 @@ INSERT INTO Employee VALUES
 (6, 'HRITIK', 40, 'MALE', 'ACCOUNTS', 60000, 'BANGALORE'),
 (7, 'SATISH', 35, 'MALE', 'IT', 75000, 'PUNE'),
 (8, 'RUPAL', 28, 'FEMALE', 'HR', 35000, 'PUNE');
+
+-- Display all employees
+select * from Employee;
