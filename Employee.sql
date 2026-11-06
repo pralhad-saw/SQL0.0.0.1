@@ -69,6 +69,23 @@ ORDER BY SALARY DESC LIMIT 3;
 -- count total employee
 select count(*) AS total_employee from Employee;
 -- calculate total employee salary
+select sum(salary) as total_salary from Employee;
+-- calculate avg of salary
+select avg(salary) AS average_salary from Employee;
+-- min salary
+select min(salary) AS min_salary from Employee;
+-- max salary
+select max(salary) AS max_salary from Employee;
+-- group by -- calculate count dept wise
+select DEPARTMENT, COUNT(*) AS count_emp from Employee group by DEPARTMENT;
+-- calculate avg deptwise
+select DEPARTMENT, AVG(salary) AS count_emp from Employee group by DEPARTMENT;
+select salary, count(*) as salaryduplicate from Employee group by salary;
+select salary, count(*) as salaryduplicate from Employee group by salary having count(*)>1;
+-- Display Departments having more than 1 employee
+SELECT DEPARTMENT, COUNT(*) AS TOTAL_EMPLOYESS FROM Employee
+GROUP BY DEPARTMENT 
+HAVING COUNT(*)>1 ;
 
 -- Display salaries from highest to lowest
 select * from Employee
