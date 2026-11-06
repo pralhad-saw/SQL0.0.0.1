@@ -32,3 +32,8 @@ SELECT * FROM Employee WHERE SALARY > 30000;
 
 -- Find Employee working in IT
 SELECT * FROM Employee WHERE DEPARTMENT = 'IT';
+
+-- Find Employees from IT Department earning more than 30000
+SELECT * FROM Employee 
+WHERE DEPARTMENT = 'IT' 
+AND SALARY > 30000;
