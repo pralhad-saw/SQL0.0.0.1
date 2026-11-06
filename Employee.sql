@@ -48,10 +48,15 @@ SELECT * FROM Employee
 WHERE SALARY BETWEEN 25000 AND 40000;
 
 
+-- emp from hydra,mum,delh
+SELECT * FROM Employee
+WHERE CITY IN ('MUMBAI', 'PUNE', 'DELHI');
+
+
 -- Find employees whose name starts with P
 select ENAME from Employee
 WHERE ENAME LIKE "P%";
 
--- emp from hydra,mum,delh
-SELECT * FROM Employee
-WHERE CITY IN ('MUMBAI', 'PUNE', 'DELHI');
+-- Find employees whose name ENDS with L
+select ENAME from Employee
+WHERE ENAME LIKE "%L";
