@@ -46,3 +46,7 @@ OR DEPARTMENT = 'ACCOUNTS';
 -- Find Employees whose salaries are between 25000 and 40000
 SELECT * FROM Employee 
 WHERE SALARY BETWEEN 25000 AND 40000;
+
+-- emp from hydra,mum,delh
+SELECT * FROM Employee
+WHERE CITY IN ('MUMBAI', 'PUNE', 'DELHI');
