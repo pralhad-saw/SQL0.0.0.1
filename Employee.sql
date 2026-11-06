@@ -66,6 +66,9 @@ SELECT DISTINCT DEPARTMENT FROM Employee;
 -- DISPLAY THE TOP 3 HIGHEST PAYED EMPLOYEE
 SELECT * FROM Employee
 ORDER BY SALARY DESC LIMIT 3;
+-- count total employee
+select count(*) AS total_employee from Employee;
+-- calculate total employee salary
 
 -- Display salaries from highest to lowest
 select * from Employee
