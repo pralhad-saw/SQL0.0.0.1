@@ -47,6 +47,11 @@ OR DEPARTMENT = 'ACCOUNTS';
 SELECT * FROM Employee 
 WHERE SALARY BETWEEN 25000 AND 40000;
 
+
+-- Find employees whose name starts with P
+select ENAME from Employee
+WHERE ENAME LIKE "P%";
+
 -- emp from hydra,mum,delh
 SELECT * FROM Employee
 WHERE CITY IN ('MUMBAI', 'PUNE', 'DELHI');
