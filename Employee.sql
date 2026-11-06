@@ -22,3 +22,7 @@ INSERT INTO Employee VALUES
 
 -- Display all employees
 select * from Employee;
+
+-- Display only name and salary
+SELECT ENAME, SALARY FROM Employee;
+
