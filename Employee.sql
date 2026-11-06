@@ -61,6 +61,11 @@ WHERE ENAME LIKE "P%";
 select ENAME from Employee
 WHERE ENAME LIKE "%L";
 
+-- Display unique department
+SELECT DISTINCT DEPARTMENT FROM Employee;
+-- DISPLAY THE TOP 3 HIGHEST PAYED EMPLOYEE
+SELECT * FROM Employee
+ORDER BY SALARY DESC LIMIT 3;
 
 -- Display salaries from highest to lowest
 select * from Employee
