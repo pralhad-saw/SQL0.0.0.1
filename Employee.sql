@@ -26,3 +26,6 @@ select * from Employee;
 -- Display only name and salary
 SELECT ENAME, SALARY FROM Employee;
 
+-- FIND SALARY GREATER THAN 30000
+SELECT * FROM Employee WHERE SALARY > 30000;
+
