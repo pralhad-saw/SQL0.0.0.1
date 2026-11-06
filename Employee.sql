@@ -41,3 +41,8 @@ AND SALARY > 30000;
 SELECT * FROM Employee
 WHERE DEPARTMENT = 'HR' 
 OR DEPARTMENT = 'ACCOUNTS';
+
+
+-- Find Employees whose salaries are between 25000 and 40000
+SELECT * FROM Employee 
+WHERE SALARY BETWEEN 25000 AND 40000;
