@@ -87,6 +87,13 @@ SELECT DEPARTMENT, COUNT(*) AS TOTAL_EMPLOYESS FROM Employee
 GROUP BY DEPARTMENT 
 HAVING COUNT(*)>1 ;
 
+-- null if
+select nullif(5,4);
+-- if null
+select ifnull(9,NULL);
+select ifnull(3,8);
+select ifnull(NULL,11);
+
 -- Display salaries from highest to lowest
 select * from Employee
 order by SALARY desc;
