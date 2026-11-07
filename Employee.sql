@@ -97,3 +97,19 @@ select ifnull(NULL,11);
 -- Display salaries from highest to lowest
 select * from Employee
 order by SALARY desc;
+
+-- display EMPLOYEE SALARY CATEGORIES
+SELECT 
+    ENAME,
+    SALARY,
+    CASE
+        WHEN SALARY >= 60000 THEN 'HIGH SALARY'
+        WHEN SALARY < 60000 AND SALARY >= 35000 THEN 'MEDIUM SALARY'
+        ELSE 'LOW SALARY'
+    END AS SALARY_CATEGORY
+FROM
+    Employee;
+-- CONCAT COMBINE EMPLOYEE NAME AND DEPARTMENT
+SELECT CONCAT(ENAME,'-',DEPARTMENT)
+AS EMPLOYEE_DETAILS FROM Employee;
+
