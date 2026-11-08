@@ -126,3 +126,6 @@ AS EMPLOYEE_DETAILS FROM Employee;
 -- view
 -- normal query
 select ENAME, Salary from Employee;
+-- created view for same
+create view salaryView as
+select ENAME, Salary from Employee;
