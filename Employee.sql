@@ -129,3 +129,5 @@ select ENAME, Salary from Employee;
 -- created view for same
 create view salaryView as
 select ENAME, Salary from Employee;
+-- retreiving data using view
+select * from salaryView;
