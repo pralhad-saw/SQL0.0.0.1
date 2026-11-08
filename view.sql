@@ -78,3 +78,10 @@ WHERE total_revenue >= (
     SELECT AVG(total_revenue)
     FROM customer_revenue
 );
+
+
+SELECT *
+FROM top_customers
+ORDER BY total_revenue DESC;
+
+
