@@ -119,6 +119,9 @@ INNER JOIN orders o
 WHERE o.status <> 'CANCELLED';
 
 
+-- 7. Drop a view
+DROP VIEW IF EXISTS product_profit_view;
+
 SELECT *
 FROM order_status_view
 WHERE status_category = 'In Transit';
