@@ -43,3 +43,8 @@ SELECT *
 FROM customer_revenue
 WHERE total_revenue > 10000
 ORDER BY total_revenue DESC;
+
+
+-- 3. Create a view with a calculated column
+
+
