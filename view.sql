@@ -66,3 +66,4 @@ SELECT *
 FROM product_profit_view
 WHERE profit_margin_percent >= 20;
 
+-- 4. Create a view with a subquery
