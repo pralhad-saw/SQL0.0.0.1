@@ -67,3 +67,14 @@ FROM product_profit_view
 WHERE profit_margin_percent >= 20;
 
 -- 4. Create a view with a subquery
+CREATE VIEW top_customers AS
+SELECT
+    customer_id,
+    customer_name,
+    total_orders,
+    total_revenue
+FROM customer_revenue
+WHERE total_revenue >= (
+    SELECT AVG(total_revenue)
+    FROM customer_revenue
+);
