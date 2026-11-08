@@ -123,3 +123,6 @@ FROM
 SELECT CONCAT(ENAME,'-',DEPARTMENT)
 AS EMPLOYEE_DETAILS FROM Employee;
 
+-- view
+-- normal query
+select ENAME, Salary from Employee;
