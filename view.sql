@@ -102,6 +102,23 @@ SELECT
     END AS status_category
 FROM orders;
 
+-- 6. Modify an existing view
+CREATE OR REPLACE VIEW customer_order_summary AS
+SELECT
+    c.customer_id,
+    c.customer_name,
+    c.email,
+    o.order_id,
+    o.order_date,
+    o.total_amount,
+    o.status,
+    o.created_at
+FROM customers c
+INNER JOIN orders o
+    ON c.customer_id = o.customer_id
+WHERE o.status <> 'CANCELLED';
+
+
 SELECT *
 FROM order_status_view
 WHERE status_category = 'In Transit';
