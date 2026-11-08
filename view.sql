@@ -61,3 +61,8 @@ SELECT
 FROM products
 WHERE unit_price > 0;
 
+
+SELECT *
+FROM product_profit_view
+WHERE profit_margin_percent >= 20;
+
