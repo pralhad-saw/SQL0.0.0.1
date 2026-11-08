@@ -46,5 +46,18 @@ ORDER BY total_revenue DESC;
 
 
 -- 3. Create a view with a calculated column
-
+CREATE VIEW product_profit_view AS
+SELECT
+    product_id,
+    product_name,
+    category,
+    unit_price,
+    unit_cost,
+    (unit_price - unit_cost) AS profit_per_unit,
+    ROUND(
+        ((unit_price - unit_cost) / unit_price) * 100,
+        2
+    ) AS profit_margin_percent
+FROM products
+WHERE unit_price > 0;
 
