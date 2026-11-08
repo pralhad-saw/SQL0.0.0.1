@@ -85,5 +85,23 @@ FROM top_customers
 ORDER BY total_revenue DESC;
 
 
--- 5. Create a view with CASE logic
 
+-- 5. Create a view with CASE logic
+CREATE VIEW order_status_view AS
+SELECT
+    order_id,
+    customer_id,
+    order_date,
+    total_amount,
+    status,
+    CASE
+        WHEN status = 'DELIVERED' THEN 'Completed'
+        WHEN status = 'SHIPPED' THEN 'In Transit'
+        WHEN status = 'PENDING' THEN 'Awaiting Payment'
+        ELSE 'Other'
+    END AS status_category
+FROM orders;
+
+SELECT *
+FROM order_status_view
+WHERE status_category = 'In Transit';
