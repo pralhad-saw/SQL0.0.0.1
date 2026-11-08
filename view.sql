@@ -85,3 +85,5 @@ FROM top_customers
 ORDER BY total_revenue DESC;
 
 
+-- 5. Create a view with CASE logic
+
