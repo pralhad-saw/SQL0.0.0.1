@@ -21,3 +21,25 @@ SELECT *
 FROM customer_order_summary
 WHERE status = 'DELIVERED'
 ORDER BY order_date DESC;
+
+-- 2. Create a view with aggregation
+CREATE VIEW customer_revenue AS
+SELECT
+    c.customer_id,
+    c.customer_name,
+    COUNT(o.order_id) AS total_orders,
+    SUM(o.total_amount) AS total_revenue,
+    AVG(o.total_amount) AS avg_order_value,
+    MAX(o.order_date) AS last_order_date
+FROM customers c
+LEFT JOIN orders o
+    ON c.customer_id = o.customer_id
+GROUP BY
+    c.customer_id,
+    c.customer_name;
+
+-- Query the aggregated view
+SELECT *
+FROM customer_revenue
+WHERE total_revenue > 10000
+ORDER BY total_revenue DESC;
