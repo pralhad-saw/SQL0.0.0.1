@@ -1,0 +1,5 @@
+SELECT d.department_name, SUM(o.amount) AS total_revenue
+FROM departments d
+JOIN employees e ON d.department_id = e.department_id
+JOIN orders o ON e.employee_id = o.sales_rep_id
+GROUP BY d.department_name;
